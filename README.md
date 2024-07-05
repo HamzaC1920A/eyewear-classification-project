@@ -15,7 +15,7 @@
 - [Application Development](#application-development)
   - [Flask App for Classification](#flask-app-for-classification)
   - [Screenshots](#screenshots)
--- [Dependencies](#dependencies) 
+- [Dependencies](#dependencies) 
 
 
 ## Introduction
@@ -51,7 +51,7 @@ import splitfolders
 input_folder = "C:\\Users\\Admin\\machine learning\\machine learnig\\stage_ete_02\\test_style\\test_resnet\\input_style"
 output = "C:\\Users\\Admin\\machine learning\\machine learnig\\stage_ete_02\\test_style\\test_resnet\\output_style" 
 splitfolders.ratio(input_folder, output, seed=42, ratio=(.8, .1, .1))
-
+```
 
 ## Model Training
 
@@ -156,7 +156,7 @@ confusion_matrix = pd.crosstab(out_df['actual_class'], out_df['predicted_class']
 sns.heatmap(confusion_matrix, cmap='Blues', annot=True, fmt='d')
 plt.show()
 print('test accuracy: {}'.format((np.diagonal(confusion_matrix).sum() / confusion_matrix.sum().sum() * 100)))
-
+```
 
 ## Application Development
 ### Flask App for Classification
@@ -212,7 +212,7 @@ def predict():
 
 if __name__ == '__main__':
     app.run(port=3010, debug=True)
-
+```
 ### Screenshots
 ![Image Dataset Structure](images/image_dataset_structure.png)
 ![Image Dataset Structure](images/image_dataset_structure.png)
