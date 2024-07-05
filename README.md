@@ -14,7 +14,7 @@
   - [Training Process](#training-process)
 - [Application Development](#application-development)
   - [Flask App for Classification](#flask-app-for-classification)
-  - [Screenshots](#screenshots)
+  - [Application Demonstration](#Application-Demonstration)
 - [Dependencies](#dependencies) 
 
 
@@ -27,6 +27,8 @@ This project involves scraping the "easylunettes" website to create a dataset of
 ### Web Scraping
 
 The dataset consists of 6528 entries with various attributes such as type (e.g., Optical, Sun), brand, name, price, gender, color, style, frame material, lens materials, and image URLs. Google Web Scraper was utilized for efficient data extraction.
+![Dataset Structure1](images/img_dataset_1.png)
+![Dataset Structure2](images/img_dataset_2.png)
 
 ### Data Cleaning
 
@@ -38,7 +40,9 @@ The dataset underwent cleaning procedures to handle missing values, standardize 
 
 Images corresponding to each characteristic (e.g., color, lens material) were downloaded using the image URLs from the dataset. The resulting image dataset is structured into folders representing each characteristic, with subfolders for each specific attribute within the characteristic.
 
-![Image Dataset Structure](images/image_dataset_structure.png)
+![Image Dataset Structure](images/img_data.png)
+![Image Dataset Structure](images/img_color.png)
+![Image Dataset Structure](images/img_black_color.png)
 
 ### Splitting Image Data
 
@@ -52,6 +56,10 @@ input_folder = "C:\\Users\\Admin\\machine learning\\machine learnig\\stage_ete_0
 output = "C:\\Users\\Admin\\machine learning\\machine learnig\\stage_ete_02\\test_style\\test_resnet\\output_style" 
 splitfolders.ratio(input_folder, output, seed=42, ratio=(.8, .1, .1))
 ```
+![example split Dataset ](images/ex_style_img__.png)
+![example split Dataset ](images/ex_style_img_.png)
+![example split Dataset ](images/ex_style_img.png)
+
 
 ## Model Training
 
@@ -157,7 +165,7 @@ sns.heatmap(confusion_matrix, cmap='Blues', annot=True, fmt='d')
 plt.show()
 print('test accuracy: {}'.format((np.diagonal(confusion_matrix).sum() / confusion_matrix.sum().sum() * 100)))
 ```
-
+![model training ](images/model_style_img.png)
 ## Application Development
 ### Flask App for Classification
 A Flask web application was developed to classify images of glasses using the trained models. Each model predicts characteristics such as style, color, and type based on input images.
@@ -213,17 +221,18 @@ def predict():
 if __name__ == '__main__':
     app.run(port=3010, debug=True)
 ```
-### Screenshots
-![Image Dataset Structure](images/image_dataset_structure.png)
-![Image Dataset Structure](images/image_dataset_structure.png)
+### Application Demonstration
+
+You can watch a demonstration of the application in this [YouTube video](https://www.youtube.com/watch?v=YQXC3owtOF4).
+
 
 ## Dépendances
-TensorFlow
-Flask
-splitfolders
-pandas
-numpy
-matplotlib
-seaborn
+- TensorFlow
+- Flask
+- splitfolders
+- pandas
+- numpy
+- matplotlib
+- seaborn
 
 
