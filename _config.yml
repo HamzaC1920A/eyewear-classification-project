@@ -1,1 +1,22 @@
 
+# Project Configuration File
+title: Eyewear Classification Project_*Hamza
+# Repository metadata
+name: Eyewear Classification Project
+description: A project to scrape eyewear data, train classification models, and develop a Flask application for eyewear classification.
+
+# GitHub Pages configuration 
+theme: jekyll-theme-cayman
+remote_theme: jekyll/minima
+
+# Project-specific directories
+assets_dir: assets
+data_dir: assets/data
+images_dir: assets/images
+scripts_dir: assets/scripts
+models_dir: assets/models
+app_dir: assets/app
+
+# GitHub Pages configuration
+markdown: kramdown
+show_downloads: True
