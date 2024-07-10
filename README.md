@@ -226,7 +226,7 @@ if __name__ == '__main__':
 You can watch a demonstration of the application in this [YouTube video](https://www.youtube.com/watch?v=YQXC3owtOF4).
 
 
-## Dépendances
+## Dependency
 - TensorFlow
 - Flask
 - splitfolders
